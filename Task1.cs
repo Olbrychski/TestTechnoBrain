@@ -22,7 +22,7 @@ public class WebApplicationTests
 
     catch (Exception ex)
     {
-        Assert.Fail("An exception occurred during setup: " + ex.Message);
+        Assert.Fail("An exception occurred during test execution: " + ex.Message);
     }
 
     }
