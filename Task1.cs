@@ -73,8 +73,16 @@ catch (Exception ex)
 
 [TearDown] //Method run after each test
 public void CleanUp()
-{
-    // Close the browser
-    driver.Quit();
+{   
+    try
+    {
+        // Close the browser
+     driver.Quit();
+     }
+    catch 
+    {
+     Assert.Fail("An exception occurred during cleanup: " + ex.Message);
+    }
+    
 }
 }
